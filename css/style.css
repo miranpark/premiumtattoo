@@ -1,0 +1,906 @@
+@charset "UTF-8";
+/* css */
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+.hidden-thing {
+  position: absolute;
+  left: 100%;
+  width: 50px;
+  height: 50px;
+  opacity: 0;
+}
+
+@font-face {
+  font-family: 'Titania';
+  src: url('../fonts/Titania-Regular.ttf');
+}
+
+/******* Laptop *******/
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 ;
+  color: #454545;
+  font-family: 'Roboto', Sans-serif;
+  font-size: 1.125em; /*18px*/
+  font-weight: 300;
+  line-height: 1.5em;
+}
+/* Headings */
+h1,
+h2 {
+  color: #525252;
+  font-family: 'Titania', Sans-serif;
+}
+
+h2 {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 2.625em;
+  padding: 5% 0;
+  margin: 0;
+}
+
+/* Link transition effects */
+a {
+  text-decoration: none;
+  -webkit-transition: .5s ease-in-out;
+  -moz-transition: .5s ease-in-out;
+  -ms-transition: .5s ease-in-out;
+  -o-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+}
+
+a:hover {
+  -webkit-transition: .5s ease-in-out;
+  -moz-transition: .5s ease-in-out;
+  -ms-transition: .5s ease-in-out;
+  -o-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+  border-bottom: 2px solid #d6300b;
+}
+
+#location a:hover,
+footer .socialMedia a:hover {
+  border-bottom: none;
+}
+
+a:visited,
+a:link {
+  color: #d6300b;
+  font-family: 'Roboto', Sans-serif;
+  font-size: 1.125em;
+}
+
+img {
+  width: 100%
+}
+
+/* section wrapper */
+.wrapper {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  border-bottom: 2px dotted #454545;
+}
+
+.contacts,
+.qna,
+.address,
+.location,
+footer {
+  width: 40%;
+  margin: 5% 30% 10%;
+}
+
+/*** BANNER ***/
+header {
+  background-size: 50%;
+  margin: 0;
+  padding: 0;
+  z-index: 1;
+  text-align: center;
+}
+
+h1,
+header img {
+  z-index: 2;
+}
+
+h1 {
+  display: none;
+  font-size: 3.25em;
+}
+
+header img {
+  width: 25%;
+  margin: 1.75% 0;
+}
+
+/*** NAVIGATION ***/
+nav {
+  margin: 0;
+  padding: 0;
+  border-top: 2px dotted #454545;
+  border-bottom: 2px dotted #454545;
+  z-index: 4;
+}
+
+nav ul {
+  list-style: none;
+  text-align: center;
+}
+
+nav ul li {
+  display: inline-block;
+  padding-right: 8%;
+}
+
+
+nav ul li:last-child {
+  padding-right: 0;
+}
+
+nav ul li a {
+  font-size: 1.125em;
+}
+
+#sticky_navigation { 
+  padding: 0;
+  margin: 0;
+  width:100%;
+  background:rgba(255,255,255,.93);
+  z-index: 8000;
+  
+}
+
+#sticky_navigation ul {
+  padding-left: 0%;
+}
+
+#sticky_navlogo {
+  display:none;
+  border:none;
+  width: 68px;
+  float: left !important;
+  padding: 0;
+  margin-left: 3%;
+  
+    }
+/** add scrolling class for gray transparent background
+when scrolling */
+#sticky_navigation.scrolling {
+  background:rgba(82, 82, 82, .9);
+}
+
+	
+/*** HOME ***/
+.contacts {
+  background-color: #fff;
+  -webkit-column-count: 2; /* Chrome, Safari, Opera */
+  -moz-column-count: 2; /* Firefox */
+  -ms-column-count: 2; /* IE */
+  -o-column-count: 2; /* Opera */
+  column-count: 2;
+  -webkit-column-rule: 1.5px dotted #454545; /* Chrome, Safari, Opera */
+  -moz-column-rule: 1.5px dotted #454545; /* Firefox */
+  -ms-column-rule: 1.5px dotted #454545; /* IE */
+  -o-column-rule: 1.5px dotted #454545; /* Opera */
+  column-rule: 1.5px dotted #454545;
+}
+
+.contacts p{
+  margin: 0;
+}
+
+.right {
+  padding-left: 4%;
+}
+
+.left {
+  text-align: right;
+  padding-right: 4%;
+}
+
+/*** MISSION ***/
+#mission {
+  background: url(../images/missionGrayXL.gif) center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -ms-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  padding: 10% 0;
+}
+
+.statement {
+  width: 40%;
+  margin: 0 auto;
+  background: #fff;
+  box-shadow: 10px 10px 10px #454545;
+}
+
+.statement p {
+  padding: 0 4% 4%;
+  margin: 0;
+}
+
+/*** ARTISTS ***/
+
+#artist{
+	margin-left: 1%;
+	padding-bottom: 5%;
+	
+}
+
+.artist {
+  display: inline-block;
+  margin-right: 3.5%;
+  width: 22%;
+  align-items: center;
+}
+.artist:last-child{
+	margin-right: 0;
+}
+
+.artist a {
+  text-decoration: underline;
+}
+
+.artist a:link{
+	font-size: 25px;
+	letter-spacing: .5px;
+}
+
+.artist a:hover {
+  border-bottom: none;
+}
+
+.artist li{
+	padding-top: 5%;
+}
+
+.artist img{
+  -webkit-filter: grayscale(100%);
+  -moz-filter: grayscale(100%);
+  -ms-filter: grayscale(100%);
+  -o-filter: grayscale(100%);
+  filter: grayscale(100%);
+  filter: url(grayscale.svg); /* Firefox 4+ */
+  filter: gray; /* IE 6-9 */ 
+   -webkit-transition: .5s ease-in-out;
+  -moz-transition: .5s ease-in-out;
+  -ms-transition: .5s ease-in-out;
+  -o-transition: .5s ease-in-out;
+  transition: .5s ease-in-out; 
+}
+
+/** Hacking Firefox **/
+@-moz-document url-prefix() {
+  .artist img { }
+  .artist img{
+  -moz-filter: none;
+  filter: none;
+}
+.artist img:hover{
+  -moz-filter: none;
+  filter: none;
+  -webkit-transition: .5s ease-in-out;
+  -moz-transition: .5s ease-in-out;
+  -ms-transition: .5s ease-in-out;
+  -o-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+}
+}
+
+.artist img:hover{
+  -webkit-filter: none;
+  -moz-filter: none;
+  -ms-filter: none;
+  -o-filter: none;
+  filter: none;
+  
+}
+
+#artistpopout{
+  width: 80%;
+  margin: auto;
+  padding-top: 5%;
+  align-items: center;
+  
+  }
+
+.artistphoto{
+  display: inline-block;
+  margin: 5px;
+  width: 23%;
+}
+
+.profilepic{
+  width: 35%;
+  float:left;
+  margin-right: 5px;
+  padding-bottom: 25px;
+}
+.socialmedia{
+  float:left;
+  width: 100%;
+  
+}
+.icon{
+  border-radius: 100%;
+  margin: 3%;
+  width:50px;
+}
+.artistbio{
+  float:left;
+  width: 45%;
+  padding-left: 20px;
+  font-family: 'Roboto', Sans-serif;
+}
+
+.artistbio h2{
+   text-align:left;
+}
+
+.gallery{
+  width:100%;
+  clear:both;
+}
+.gpic{
+  width:19%;
+}
+
+li{
+  list-style:none;
+  text-align:center;
+}	
+
+/*** FAQ ***/
+#faq {
+  background: url('../images/faqbgleftDT2.png') no-repeat 0 0,
+              url('../images/faqbgrightDT2.png') no-repeat 100% 0 ;
+  background-size: 15% 100%;
+  overflow: auto;
+}
+
+article.qna h3 {
+  cursor: pointer;
+}
+
+.qna h3 i {
+  display: none;
+}
+
+.rule {
+  /*padding-left: 0;*/
+}
+
+.rule li {
+  text-align: left;
+  list-style: disc;
+}
+
+/*** LOCATION ***/
+#location {
+	background: url('../images/locationbgDT.png') no-repeat center;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-ms-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	margin: 0;
+	padding: 0;
+ 	z-index: 1;
+}
+
+#location h2 {
+  z-index: 2;
+}
+
+.address {
+  display: flex;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  z-index: 2;
+  box-shadow: 8px 8px 8px #616161;
+}
+
+.address p,
+.address a {
+  flex: 1;
+  -webkit-flex: 1;
+  -moz-flex: 1;
+  -ms-flex: 1;
+  -o-flex: 1;
+}
+
+.address p {
+  background: #fff;
+  margin: 0;
+  line-height: 1.8em;
+}
+
+.address span {
+  display: block;
+  margin: 35% auto;
+  width: 50%;
+  padding-left: 10%;
+}
+
+.address img {
+  -webkit-filter: grayscale(100%);
+  -moz-filter: grayscale(100%);
+  -ms-filter: grayscale(100%);
+  -o-filter: grayscale(100%);
+  filter: grayscale(100%);
+  filter: url(grayscale.svg); /* Firefox 4+ */
+  filter: gray; /* IE 6-9 */;
+  -webkit-transition: .5s ease-in-out;
+  -moz-transition: .5s ease-in-out;
+  -ms-transition: .5s ease-in-out;
+  -o-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+}
+
+.address img:hover {
+  -webkit-filter: none;
+  -moz-filter: none;
+  -ms-filter: none;
+  -o-filter: none;
+  filter: none;
+   -webkit-transition: .5s ease-in-out;
+  -moz-transition: .5s ease-in-out;
+  -ms-transition: .5s ease-in-out;
+  -o-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+}
+
+/*** FOOTER ***/
+footer {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+  -ms-flex-direction: column;
+  -o-flex-direction: column;
+  flex-direction: column;
+  margin-bottom: 5% !important;
+  text-align: center;
+}
+
+footer h2 {
+  padding-top: 0;
+}
+
+.socialMedia {
+  display: inline-flex;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  -o-justify-content: center;
+  justify-content: center; 
+}
+
+.socialMedia a {
+	padding: 10% 2%;
+	#padding: 10% 2%; /* IE 6, 7*/
+	padding/**/: 10% 2%; /* everthing but IE 6*/
+}
+
+.socialMedia a:hover {
+  opacity: 1;
+}
+
+.socialMedia img{
+  background: blue;
+  -webkit-transition: .5s ease-in-out;
+  -moz-transition: .5s ease-in-out;
+  -ms-transition: .5s ease-in-out;
+  -o-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+  }
+
+ .socialMedia a:hover img {
+  opacity: .5;
+ } 
+/** Hacking Firefox padding**/
+@-moz-document url-prefix() {
+		
+	.socialMedia a {
+		
+	}
+	.socialMedia img{
+	padding: 80% 2%;
+  opacity: 1;	
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+	}
+	.copyRight p {
+	padding-top: 3%;	
+	}
+}
+
+.copyRight {
+	text-align: center;
+}
+
+
+
+
+/**************************************************
+                Tablet View
+**************************************************/
+
+@media screen and (max-width: 1366px) {
+
+.contacts,
+.address,
+.location,
+footer {
+  width: 70%;
+  margin: 5% 15% 10%;
+}
+
+.statement {
+  width: 70%;
+  margin: 0 auto;
+}
+/** link transition effect**/
+a {
+  text-decoration: underline;
+}
+
+/*************************
+    Header
+*************************/
+header {
+  width: 100%;
+  text-align: center;
+  /*margin: 0 1.5% 1.5% 0;*/
+}
+
+/*************************
+    Navigation
+*************************/
+nav {
+  margin-top: 4%;
+}
+
+/*************************
+    "Home" Hours
+*************************/
+
+#home {
+  width: 100%;
+  padding-bottom: 0%;
+}
+
+/*************************
+  Paragraphs and Headings
+*************************/
+
+p {
+  font-size: 1em;
+  line-height: 1.3em;
+}
+
+h1,
+h2 {
+  font-size: 1.8em;
+}
+
+
+/*************************
+    Artists
+*************************/
+.artist {
+    margin: 0.5%;
+    width: 48%;
+}
+
+.rightpic {
+  float: right;
+  clear: right;
+}
+
+.leftpic {
+  float: left;
+  clear: left;
+}
+
+.gpic{
+	width:45%;
+}
+
+/*************************
+    FAQ
+*************************/
+
+#faq {
+  clear: both;
+}
+
+.qna {
+  width: 50%;
+  margin: 5% 25% 10%;
+}
+
+/*************************
+    Location
+*************************/
+
+.address span {
+  margin: 30% auto;
+  padding-left: 26%;
+  width: 100%;
+}
+
+.address img {
+  background: url('../images/mapclose-tab.png');
+}
+
+/*************************
+    Footer
+*************************/
+
+footer {
+  
+}
+
+.socialMedia {
+  padding: 5% 0;
+}
+
+.socialMedia img {
+	width: 10%;
+
+}
+
+/** Hacking Firefox padding**/
+@-moz-document url-prefix() {
+		
+	.socialMedia a {
+		
+	}
+	.socialMedia img{
+	padding: 80% 1%;	
+	}
+	.copyRight p {
+	padding-top: 3%;	
+	}
+}
+
+}
+
+/**************************************************
+                Mobile View
+**************************************************/
+
+@media screen and (max-width: 767px) {
+
+.contacts,
+.qna,
+.address,
+.location,
+footer {
+  width: 80%;
+  margin: 5% 10% 10%;
+}
+
+.statement {
+  width: 80%;
+  margin: 0 auto;
+}
+
+/*************************
+		Header
+*************************/
+header {
+	width: 100%;
+	text-align: center;
+	margin: 0 1.5% 1.5% 0;
+}
+
+.header-logo {
+	display: none;
+}
+
+header img {
+  width: 50%;
+}
+
+/*************************
+		Navigation
+*************************/
+/*nav {
+	margin-top: 4%;
+}
+
+nav ul li {
+  	width: 85%;
+  	display: block;
+}
+*/
+
+#nav-toggle span, #nav-toggle span:before, #nav-toggle span:after {
+  cursor: pointer;
+  border-radius: 1px;
+  height: 5px;
+  width: 35px;
+  background: white;
+  position: absolute;
+  display: block;
+  content: '';
+}
+#nav-toggle span:before {
+  top: -10px;
+}
+#nav-toggle span:after {
+  bottom: -10px; 
+}
+
+/*************************
+		"Home" Hours
+*************************/
+
+#home {
+	width: 100%;
+	padding-bottom: 0%;
+	
+}
+
+ .contacts {
+  background-color: #fff;
+  -webkit-column-count: 1; /* Chrome, Safari, Opera */
+  -moz-column-count: 1; /* Firefox */
+  -ms-column-count: 1; /* IE */
+  -o-column-count: 1; /* Opera */
+  column-count: 1;
+  -webkit-column-rule: none; /* Chrome, Safari, Opera */
+  -moz-column-rule: none; /* Firefox */
+  -ms-column-rule: none; /* IE */
+  -o-column-rule: none; /* Opera */
+  column-rule: none;
+}
+
+.contacts p {
+	text-align: left;
+	padding: 0;
+}
+
+.right,
+.left {
+	padding-left: 15% !important;
+}
+
+
+
+/*************************
+		Artists
+*************************/
+.artist {
+  	width: 100%;
+}
+
+.gpic{
+	width:80%;
+}
+/*************************
+  Paragraphs and Headings
+*************************/
+
+p,
+a,
+a:visited,
+a:link {
+  font-size: 0.9em;
+  line-height: 1.2em;
+}
+
+h1,
+h2 {
+  font-size: 1.5em;
+}
+
+h3{
+  font-size: 1.1em;
+}
+/*************************
+    FAQ
+*************************/
+
+#faq {
+  background: none;
+}
+
+#faq h3 {
+  border-top: 1px solid #BFBFBF;
+  padding-top: 1em;
+}
+
+.qna h3 i {
+  display: inline-block;
+  padding-right: 5%;
+}
+
+article.qna p {
+  display: none;
+}
+
+/*************************
+		Location
+*************************/
+
+.address {
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+  -ms-flex-direction: column;
+  -o-flex-direction: column;
+  flex-direction: column;
+}
+
+.address p,
+.address a {
+  width: 100%;
+  margin: 0 auto;
+  z-index: 3;
+}
+
+.address p {
+  line-height: 1.2em;
+}
+
+.address span {
+  padding: 0 auto;
+}
+
+.address a {
+  background: gray;
+  opacity: .8;
+}
+
+.address img {
+  -webkit-filter: none;
+  -moz-filter: none;
+  -ms-filter: none;
+  -o-filter: none;
+  filter: none;
+}
+
+/*************************
+		Footer
+*************************/
+
+.socialMedia {
+  padding: 0;
+}
+
+.socialMedia a {
+	padding: 10% .5% 5% .5%;
+}
+
+.socialMedia img {
+	width: 10%;
+}
+
+/*.copyRight {
+	it is unclear in the other stylesheet what properties are being affected.
+}*/
+}
+
+
+
+
+
+
+
