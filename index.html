@@ -7,8 +7,9 @@
   <meta name="description" content="This is an example of a meta description. This will often show up in search results.">
   <title>PREMIUM TATTOO</title>
   <link rel="stylesheet" type="text/css" href="css/style.css">
+   <link rel="stylesheet" type="text/css" href="css/responsive-nav.css">
   <!--google fonts-->
-  <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+  <link href="http://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
   <!--FAQ accordion icon-->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
   <!--jQuery -->
@@ -26,26 +27,26 @@
   <script type="text/javascript" src="fancybox/source/jquery.fancybox.js"></script>
   <!--sticky nav-->
   <!--<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>-->
- <script src="js/nav.js"></script>
+  <script src="js/nav.js"></script>
   <script src="js/responsive-nav.js"></script>
    <!-- This file doesn't exist and resposive-nav.min.js is same as(minified version) responsive-nav.js -->
   <!--<script src="js/respond.min.js"></script>-->
   <script>
 $(document).ready(function(){
-  $(".matt").hide();
+	$(".matt").hide();
     $("#matt").click(function(){
-        $(".matt").toggle();    
+        $(".matt").toggle();		
     });
-  $(".brett").hide();
-  $("#brett").click(function(){
+	$(".brett").hide();
+	$("#brett").click(function(){
         $(".brett").toggle();
     });
-  $(".dani").hide();
-  $("#dani").click(function(){
+	$(".dani").hide();
+	$("#dani").click(function(){
         $(".dani").toggle();
     });
-  $(".edwards").hide();
-  $("#edwards").click(function(){
+	$(".edwards").hide();
+	$("#edwards").click(function(){
         $(".edwards").toggle();
     });
    });
@@ -56,17 +57,17 @@ $(document).ready(function(){
   <div class="container">
 
     <!--**** BANNER ****-->
-    <header role="banner">
+<header role="banner">
       <h1>Premium Tattoo</h1>
       <img src="images/logoDTdarker.png" alt="shop logo"/>
     </header>
 
     <!--**** NAVIGATION ****-->
-    <nav role="navigation" id="sticky_navigation" class="nav-collapse">
+    <nav role="navigation" id="sticky_navigation" >
       <div id="sticky_navlogo">
 		   <a href="index.html"> <img class="header-logo" src="images/logoMdarker68.png" alt="shop logo"/></a>
       </div> 
-      <ul>
+      <ul class="nav-collapse">
         <li><a href="index.html">Home</a></li>
         <li><a href="#mission">Mission</a></li>
         <li><a href="#artists">Artists</a></li>
@@ -108,26 +109,176 @@ $(document).ready(function(){
     </section> <!--**** ABOUT ends ****-->
 
      <!--**** ARTISTS ****-->
-    <section id="artists" class="wrapper">
+  <section id="artists" class="wrapper">
       <h2 role="heading">Artists</h2>
       <div id="artist">
       <div class="artist">
-      <a href="deckerbio.html"  class="fancybox" data-fancybox-type="iframe" ><img src="images/artistPhotos/mattDT.jpg" alt="photo"><li>Matt Decker</li></a>
-      </div> <!--Decker section ends-->
+      <a href="deckerbio.html"  class="fancybox" data-fancybox-type="iframe" ><img src="images/artistPhotos/mattDT.jpg" alt="photo"><li>Matt Decker</li></a></div>
+      <!--Mobile section (hidden for desktop and tablet)-->
+     <div class="artistmobile" id="matt">
+      <a href="#"><img src="images/artistPhotos/mattDT.jpg" alt="photo"><li>Matt Decker</li></a></div>
+      <div class="artistpopout matt" >
 
-      <div class="artist">
-        <a href="brettbio.html" class="fancybox" data-fancybox-type="iframe" ><img src="images/artistPhotos/brettDT.jpg" alt="photo"><li>Brett Baumgart</li></a>
-        </div><!--Baumgart section ends-->
+        <h1>Artists Bio</h1>
+        <img src="images/artistPhotos/mattDT.jpg" class="profilepic"/>
 
-      <div class="artist">
-        <a href="silvabio.html" class="fancybox" data-fancybox-type="iframe"><img src="images/artistPhotos/danielleDT.jpg" alt="photo"><li>Danielle Silva</li></a></div>
-      <!--Silva section ends-->
+        <div class="artistbio">
+          <h2>Matt Decker</h2>
+          <p>Matt Decker began his tattooing career in the fall of 1993. He apprenticed in
 
-      <div class="artist">
-        <a href="edwardsbio.html" class="fancybox" data-fancybox-type="iframe"><img src="images/artistPhotos/lawrenceDT.jpg" alt="photo"><li>Lawrence Edwards</li></a></div>
-        </div>
-        <!--Edwards section ends-->
-    </section> <!--**** ARTISTS ends ****-->
+            Albuquerque, New Mexico at Rune Stone Tattoo under Ricky Fairweather. Matt 
+
+            moved to Oakland in 1994 and since been tattooing and creating art in the Bay Area. 
+
+            He opened Premium Tattoo with his wife in April of 2008.</p>
+            <div class="socialmedia"> 
+              <a href="https://instagram.com/deckro/" target="new"><img src="images/icons/instagram80.gif" class="icon"/></a>
+              <a href="mailto:premiumarmy@gmail.com" target="new"><img src="images/icons/mail80.gif" class="icon"/></a>
+            </div></div>
+            <div class="gallery">
+
+             <img src="images/Matt Decker/Decker01M.jpg" class="gpic" alt="" />
+
+             <img src="images/Matt Decker/decker02M.jpg" class="gpic" alt="" />
+
+             <img src="images/Matt Decker/decker03M.jpg" class="gpic" alt="" />
+
+             <img src="images/Matt Decker/decker04M.jpg" class="gpic" alt="" />
+
+             <img src="images/Matt Decker/decker05M.jpg" class="gpic" alt="" />   
+
+             <img src="images/Matt Decker/decker06M2.jpg" class="gpic" alt="" /> 
+
+             <img src="images/Matt Decker/decker07M.jpg" class="gpic" alt="" />    
+
+             <img src="images/Matt Decker/decker08M.jpg" class="gpic" alt="" />
+
+             <img src="images/Matt Decker/decker09M.jpg" class="gpic" alt="" />
+
+             <img src="images/Matt Decker/decker10M.jpg" class="gpic" alt="" /> 
+           </div>
+         </div>
+         <!--Mobile section ends-->
+         <!--Decker section ends-->
+
+         <div class="artist">
+          <a href="brettbio.html" class="fancybox" data-fancybox-type="iframe" ><img src="images/artistPhotos/brettDT.jpg" alt="photo"><li>Brett Baumgart</li></a></div>
+          <!--Mobile section (hidden for desktop and tablet)-->
+          <div class="artistmobile" id="brett">
+            <a href="#"><img src="images/artistPhotos/brettDT.jpg" alt="photo"><li>Brett Baumgart</li></a></div>
+            <div class="artistpopout brett">
+              <h1>Artists Bio</h1>
+              <img src="images/artistPhotos/brettDT.jpg" class="profilepic"/>
+              <div class="artistbio">
+                <h2>Brett Baumgart</h2>
+                <p>Brett Baumgart began his tattooing career in 2007. After tattooing locally and
+
+                  abroad, Brett joined Premium Tattoo in January of 2012.</p>
+                  <div class="socialmedia"> <a href="https://instagram.com/brettbaumgart/" target="new"><img src="images/icons/instagram80.gif" class="icon"/></a>
+                    <a href="mailto:premiumarmy@gmail.com" target="new"><img src="images/icons/mail80.gif" class="icon"/></a>
+                  </div></div>
+                  <div class="gallery">
+
+                   <img src="images/Brett Baumgart/baumgart01M2.jpg" class="gpic" alt="" />
+
+                   <img src="images/Brett Baumgart/baumgart02M2.jpg" class="gpic" alt="" />
+
+                   <img src="images/Brett Baumgart/baugmart03M2.jpg" class="gpic" alt="" />
+
+                   <img src="images/Brett Baumgart/baugmart04M2.jpg" class="gpic" alt="" />
+
+
+                   <img src="images/Brett Baumgart/baumgart05M.jpg" class="gpic" alt="" />
+
+                   <img src="images/Brett Baumgart/baumgart06M.jpg" class="gpic" alt="" />
+
+
+                   <img src="images/Brett Baumgart/baumgart07M.jpg" class="gpic" alt="" />
+                   
+                   <img src="images/Brett Baumgart/baumgart08M.jpg" class="gpic" alt="" />
+                   
+                   <img src="images/Brett Baumgart/baumgart09M.jpg" class="gpic" alt="" />
+
+                 </div>
+               </div>
+               <!--Mobile section ends-->
+               <!--Baumgart section ends-->
+
+               <div class="artist">
+                <a href="silvabio.html" class="fancybox" data-fancybox-type="iframe"><img src="images/artistPhotos/danielleDT.jpg" alt="photo"><li>Danielle Silva</li></a></div>
+                <!--Mobile section (hidden for desktop and tablet)-->
+                <div class="artistmobile" id="dani">
+                  <a href="#"><img src="images/artistPhotos/danielleDT.jpg" alt="photo"><li>Danielle Silva</li></a></div>
+                  <div class="artistpopout dani" >
+                    <h1> Artists Bio</h1>
+                    <img src="images/artistPhotos/danielleDT.jpg" class="profilepic"/>
+
+                    <div class="artistbio">
+                      <h2> Danielle Silva</h2>
+                      <p>Danielle Silva began her tattooing career in 2009. After tattooing around the state,
+
+                        Danielle joined Premium Tattoo in January of 2012.</p>
+                        <div class="socialmedia"> 
+                          <a href="https://instagram.com/doomsdaydani/" target="new"><img src="images/icons/instagram80.gif" class="icon"/></a>
+                          <a href="https://facebook.com/dstattoo" target="new"><img src="images/icons/facebook80.gif" class="icon"/></a>
+                          <a href="mailto:premiumarmy@gmail.com" target="new"><img src="images/icons/mail80.gif" class="icon"/></a>
+                        </div></div>
+                        <div class="gallery">
+
+                         <img src="images/Danielle Silva/silva01M.jpg" class="gpic" alt="" />
+                         <img src="images/Danielle Silva/silva02M.jpg" class="gpic" alt="" />
+                         <img src="images/Danielle Silva/silva03M.jpg" class="gpic" alt="" />
+                         <img src="images/Danielle Silva/silva04M.jpg" class="gpic" alt="" />
+                         <img src="images/Danielle Silva/silva05M.jpg" class="gpic" alt="" />
+                         <img src="images/Danielle Silva/silva06M2.jpg" class="gpic" alt="" />
+                         <img src="images/Danielle Silva/silva07M2.jpg" class="gpic" alt="" />
+                         <img src="images/Danielle Silva/silva08M2.jpg" class="gpic" alt="" />
+                         <img src="images/Danielle Silva/silva09M.jpg" class="gpic" alt="" />
+                         <img src="images/Danielle Silva/silva10M.jpg" class="gpic" alt="" />
+
+                       </div>
+                     </div>  
+                     <!--Mobile section ends-->
+                     <!--Silva section ends--> 
+
+                     <div class="artist">
+                      <a href="edwardsbio.html" class="fancybox" data-fancybox-type="iframe"><img src="images/artistPhotos/lawrenceDT.jpg" alt="photo"><li>Lawrence Edwards</li></a></div>
+                      <!--Mobile section (hidden for desktop and tablet)-->
+                      <div class="artistmobile" id="edwards">
+                        <a href="#" class="mobile"><img src="images/artistPhotos/lawrenceDT.jpg" alt="photo"><li>Lawrence Edwards</li></a></div>
+                        <div class="artistpopout edwards">
+                          
+                          <h1>Artists Bio</h1>
+                          <img src="images/artistPhotos/lawrenceDT.jpg" class="profilepic"/>
+
+                          <div class="artistbio">
+                            <h2>Lawrence Edwards</h2>
+
+                            <p>Lawrence Edwards began his tattooing career in 2012. After tattooing in Oregon and
+
+                              California, Lawrence joined Premium Tattoo in September of 2015.</p>
+                              <div class="socialmedia"> <a href="https://instagram.com/ledwardstattoo/" target="new"><img src="images/icons/instagram80.gif" class="icon"/></a>
+                                <a href="mailto:premiumarmy@gmail.com" target="new"><img src="images/icons/mail80.gif" class="icon"/></a>
+                              </div></div>
+                              <div class="gallery">
+                               <img src="images/Lawrence Edward/Lawrence01M.jpg" class="gpic" alt="" />
+                               <img src="images/Lawrence Edward/Lawrence02M.jpg" class="gpic" alt="" />
+                               <img src="images/Lawrence Edward/lawrence03M.jpg" class="gpic" alt="" />
+                               <img src="images/Lawrence Edward/lawrence04M.jpg" class="gpic" alt="" />
+                               <img src="images/Lawrence Edward/lawrence05M.jpg" class="gpic" alt="" />
+                               <img src="images/Lawrence Edward/lawrence06M.jpg" class="gpic" alt="" />
+                               <img src="images/Lawrence Edward/lawrence07M.jpg" class="gpic" alt="" />
+                               <img src="images/Lawrence Edward/lawrence08M.jpg" class="gpic" alt="" />
+                               <img src="images/Lawrence Edward/lawrence09M.jpg" class="gpic" alt="" />
+                               <img src="images/Lawrence Edward/lawrence10M.jpg" class="gpic" alt="" />
+                               <img src="images/Lawrence Edward/lawrence11M.jpg" class="gpic" alt="" />
+                               <img src="images/Lawrence Edward/lawrence12M.jpg" class="gpic" alt="" /> 
+                             </div>
+                           </div>
+                         </div>
+                         <!--Mobile section ends-->
+                         <!--Edwards section ends-->
+                       </section> <!--**** ARTISTS ends ****-->
 
      <!--**** FAQ ****-->
      <section id="faq" class="wrapper">
@@ -199,14 +350,12 @@ $(document).ready(function(){
 <script type="text/javascript">
 jQuery(document).ready(function($) {
     $(".fancybox").fancybox({
-        fitToView: false,
-        maxWidth: "95%",
-		maxHeight: "100%",
+        fitToView: true,
+      	maxHeight: "100%"
 		 // or whatever you need
     });
 }); // ready$(".fancybox").fancybox();
 </script>
-<!--hamburger bar-->
 <script>
 var navigation = responsiveNav(".nav-collapse", {
 	animate: true,// Boolean: Use CSS3 transitions, true or false

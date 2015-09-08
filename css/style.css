@@ -1,16 +1,14 @@
 @charset "UTF-8";
 /* css */
-
 html,
 body {
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
 }
 body {
-  width: 100%;
+	width: 100%;
   height: 100%;
-
 	/*align-content: center;*/
 }
 
@@ -164,7 +162,6 @@ nav ul li a {
 #sticky_navigation { 
   padding: 0;
   margin: 0;
-  height:66px;
   width:100%;
   background:rgba(255,255,255,.93);
   z-index: 8000;
@@ -260,15 +257,18 @@ when scrolling */
 	margin-right: 0;
 }
 
+.artistmobile, 
 .artist a {
   text-decoration: underline;
 }
 
+.artistmobile, 
 .artist a:link{
 	font-size: 25px;
 	letter-spacing: .5px;
 }
 
+.artistmobile, 
 .artist a:hover {
   border-bottom: none;
   text-decoration: none;
@@ -331,6 +331,14 @@ when scrolling */
   padding-top: 5%;
   align-items: center;
   
+  }
+.artistpopout{
+  width: 80%;
+  margin: auto;
+  padding-bottom: 5%;
+  align-items: center;
+  
+  display: none;
   }
 
 .artistphoto{
@@ -473,6 +481,11 @@ article.qna h3 {
   -ms-filter: none;
   -o-filter: none;
   filter: none;
+   -webkit-transition: .5s ease-in-out;
+  -moz-transition: .5s ease-in-out;
+  -ms-transition: .5s ease-in-out;
+  -o-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
 }
 
 /*** FOOTER ***/
@@ -515,13 +528,16 @@ footer h2 {
   opacity: .5;
  } 
 
- .copyRight p {
+.copyRight p {
   padding: 0;
 }
 
- .copyRight {
-  text-align: center;
+.copyRight {
+	text-align: center;
 }
+
+
+
 
 /**************************************************
                 Tablet View
@@ -595,11 +611,13 @@ h2 {
     Artists
 *************************/
 .artist {
-  margin: 0.5%;
-  width: 48%;
+    margin: 0.5%;
+    width: 48%;
 	padding-bottom: 5%;
 }
-
+.artistmobile {
+	display: none;
+	}
 .rightpic {
   float: right;
   clear: right;
@@ -658,6 +676,7 @@ footer {
 
 .socialMedia img {
 	width: 10%;
+
 }
 
 /**************************************************
@@ -699,8 +718,33 @@ header img {
 /*************************
 		Navigation
 *************************/
-/* by sinyi*/
+/*nav {
+	margin-top: 4%;
+}
 
+nav ul li {
+  	width: 85%;
+  	display: block;
+}
+*/
+
+#nav-toggle span, #nav-toggle span:before, #nav-toggle span:after {
+  cursor: pointer;
+  border-radius: 1px;
+  height: 5px;
+  width: 35px;
+  background: white;
+  position: absolute;
+  display: block;
+  content: '';
+}
+#nav-toggle span:before {
+  top: -10px;
+  
+}
+#nav-toggle span:after {
+  bottom: -10px; 
+}
 
 /*************************
 		"Home" Hours
@@ -724,7 +768,6 @@ header img {
   -ms-column-rule: none; /* IE */
   -o-column-rule: none; /* Opera */
   column-rule: none;
-
 }
 
 .contacts p {
@@ -744,15 +787,34 @@ header img {
 		Artists
 *************************/
 .artist {
-  	width: 100%;
-	padding-bottom: 13%;
+  	display: none;
 }
 
+.artistmobile {
+	display:block;
+	width: 100%;
+	padding-top: 20%;
+	padding-bottom: 1%;
+}
+
+#matt {
+	padding-top: 5%;
+}
+
+.artistmobile li{
+	padding-top: 3%;
+}
+
+.artistpopout{
+	display: block;
+	border-bottom: dotted;
+}
 .gpic{
 	width:100%;
 }
 .artistbio h2{
    text-align: center;
+   display: none;
 }
 
 .profilepic{
@@ -764,6 +826,11 @@ header img {
 	padding-left: 0;
 	text-align: center;
 }
+
+img.profilepic{
+	display:none;
+}
+
 /*************************
   Paragraphs and Headings
 *************************/

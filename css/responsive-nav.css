@@ -1,54 +1,85 @@
-/*! responsive-nav.js 1.0.39 by sinyi*/
-@media screen and (max-width: 1366px) {
-  .nav-toggle {
-    display: none;
-  }
+/*! responsive-nav.js 1.0.39 by @viljamis */
+@media screen and (max-width: 767px) {
+	
+@font-face {
+  font-family: 'Roboto';
+  src:url("../images/icons/responsivenav.eot");
+  src:url(".../images/icons/responsivenav.eot?#iefix") format("embedded-opentype"),
+    url("../images/icons/responsivenav.ttf") format("truetype"),
+    url("../images/icons/responsivenav.woff") format("woff"),
+    url("../images/icons/responsivenav.svg#responsivenav") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+.nav-collapse ul {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  display: block;
+  list-style: none;
 }
 
-@media screen and (max-width: 736px) {
-  .nav-collapse ul {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    display: block;
-    list-style: none;
-  }
+.nav-collapse li {
+  width: 100%;
+  display: block;
+}
 
-  .nav-collapse li {
-    width: 100%;
-    display: block;
-  }
+.js .nav-collapse {
+  clip: rect(0 0 0 0);
+  max-height: 0;
+  position: absolute;
+  display: block;
+  overflow: hidden;
+  zoom: 1;
+}
 
-  .js .nav-collapse {
-    clip: rect(0 0 0 0);
-    max-height: 0;
-    position: absolute;
-    display: block;
-    overflow: hidden;
-    zoom: 1;
-  }
-
-/*.nav-collapse.opened {
+.nav-collapse.opened {
   max-height: 9999px;
-  }*/
-
-  .nav-toggle {
-    -webkit-tap-highlight-color: rgba(0,0,0,0);
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    -o-user-select: none;
-    user-select: none;
-    display:block;
-  }
-  /*add by sinyi*/
-  #sticky_navigation.nav-collapse.opened {
-   height:100%;
- }
 }
-/**
-@media screen and (min-width: 40em) {
+
+.nav-toggle {
+	position: fixed;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+  text-decoration: none;
+  text-indent: -999px;
+  position: relative;
+  width: 70px;
+  height: 55px;
+  float: left;
+ 
+  }
+  
+  .nav-toggle:before {
+  color: #d6300b; /* Edit this to change the icon color */
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  font-size: 28px;
+  text-transform: none;
+  position: absolute;
+  content: "≡";
+  text-indent: 0;
+  text-align: center;
+  line-height: 55px;
+  speak: none;
+  width: 100%;
+
+}
+
+.nav-toggle.active::before {
+  font-size: 24px;
+  content:"x";
+}
+}
+
+@media screen and (min-width: 48em) {
   .js .nav-collapse {
     position: relative;
   }
@@ -58,6 +89,5 @@
   .nav-toggle {
     display: none;
   }
-  
 }
-*/
+
