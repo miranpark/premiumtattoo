@@ -1,41 +1,53 @@
-/*! responsive-nav.js 1.0.39 by @viljamis */
-
-.nav-collapse ul {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  display: block;
-  list-style: none;
+/*! responsive-nav.js 1.0.39 by sinyi*/
+@media screen and (max-width: 1366px) {
+  .nav-toggle {
+    display: none;
+  }
 }
 
-.nav-collapse li {
-  width: 100%;
-  display: block;
-}
+@media screen and (max-width: 736px) {
+  .nav-collapse ul {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    display: block;
+    list-style: none;
+  }
 
-.js .nav-collapse {
-  clip: rect(0 0 0 0);
-  max-height: 0;
-  position: absolute;
-  display: block;
-  overflow: hidden;
-  zoom: 1;
-}
+  .nav-collapse li {
+    width: 100%;
+    display: block;
+  }
 
-.nav-collapse.opened {
+  .js .nav-collapse {
+    clip: rect(0 0 0 0);
+    max-height: 0;
+    position: absolute;
+    display: block;
+    overflow: hidden;
+    zoom: 1;
+  }
+
+/*.nav-collapse.opened {
   max-height: 9999px;
-}
+  }*/
 
-.nav-toggle {
-  -webkit-tap-highlight-color: rgba(0,0,0,0);
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  -o-user-select: none;
-  user-select: none;
+  .nav-toggle {
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+    display:block;
+  }
+  /*add by sinyi*/
+  #sticky_navigation.nav-collapse.opened {
+   height:100%;
+ }
 }
-
+/**
 @media screen and (min-width: 40em) {
   .js .nav-collapse {
     position: relative;
@@ -46,4 +58,6 @@
   .nav-toggle {
     display: none;
   }
+  
 }
+*/

@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="This is an example of a meta description. This will often show up in search results.">
   <title>PREMIUM TATTOO</title>
   <link rel="stylesheet" type="text/css" href="css/style.css">
@@ -26,9 +26,30 @@
   <script type="text/javascript" src="fancybox/source/jquery.fancybox.js"></script>
   <!--sticky nav-->
   <!--<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>-->
-  <script src="js/nav.js"></script>
-
-
+ <script src="js/nav.js"></script>
+  <script src="js/responsive-nav.js"></script>
+   <!-- This file doesn't exist and resposive-nav.min.js is same as(minified version) responsive-nav.js -->
+  <!--<script src="js/respond.min.js"></script>-->
+  <script>
+$(document).ready(function(){
+  $(".matt").hide();
+    $("#matt").click(function(){
+        $(".matt").toggle();    
+    });
+  $(".brett").hide();
+  $("#brett").click(function(){
+        $(".brett").toggle();
+    });
+  $(".dani").hide();
+  $("#dani").click(function(){
+        $(".dani").toggle();
+    });
+  $(".edwards").hide();
+  $("#edwards").click(function(){
+        $(".edwards").toggle();
+    });
+   });
+</script>
 </head>
 
 <body>
@@ -41,9 +62,9 @@
     </header>
 
     <!--**** NAVIGATION ****-->
-    <nav role="navigation" id="sticky_navigation">
+    <nav role="navigation" id="sticky_navigation" class="nav-collapse">
       <div id="sticky_navlogo">
-		    <img class="header-logo" src="images/logoMdarker68.png" alt="shop logo"/>
+		   <a href="index.html"> <img class="header-logo" src="images/logoMdarker68.png" alt="shop logo"/></a>
       </div> 
       <ul>
         <li><a href="index.html">Home</a></li>
@@ -105,7 +126,7 @@
       <div class="artist">
         <a href="edwardsbio.html" class="fancybox" data-fancybox-type="iframe"><img src="images/artistPhotos/lawrenceDT.jpg" alt="photo"><li>Lawrence Edwards</li></a></div>
         </div>
-        <!--Gentz section ends-->
+        <!--Edwards section ends-->
     </section> <!--**** ARTISTS ends ****-->
 
      <!--**** FAQ ****-->
@@ -179,9 +200,28 @@
 jQuery(document).ready(function($) {
     $(".fancybox").fancybox({
         fitToView: false,
-        maxWidth: "95%" // or whatever you need
+        maxWidth: "95%",
+		maxHeight: "100%",
+		 // or whatever you need
     });
 }); // ready$(".fancybox").fancybox();
+</script>
+<!--hamburger bar-->
+<script>
+var navigation = responsiveNav(".nav-collapse", {
+	animate: true,// Boolean: Use CSS3 transitions, true or false
+	transition: 284, // Integer: Speed of the transition,milliseconds
+	insert: "after",//String: Insert toggle before/after navigation
+	customToggle: "",// Selector: Specify the ID of a custom toggle
+	closeOnNavClick: false, // Boolean: Close the navigation on click
+	openPos: "relative", //String:Position opennav, relative/static
+	navClass: "nav-collapse",// String: Default CSS class.
+	navActiveClass: "js-nav-active",// String: Class added to <html>
+	jsClass: "js",// String:'JS enabled' class added to <html>
+	init: function(){},// Function: Init callback
+	open: function(){},// Function: Open callback
+	close: function(){}// Function: Close callback
+});
 </script>
 </body>
 </html>

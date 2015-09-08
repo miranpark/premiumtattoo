@@ -1,10 +1,17 @@
 @charset "UTF-8";
 /* css */
 
+html,
 body {
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+body {
+  width: 100%;
+  height: 100%;
+
+	/*align-content: center;*/
 }
 
 .hidden-thing {
@@ -55,6 +62,7 @@ a {
   -ms-transition: .5s ease-in-out;
   -o-transition: .5s ease-in-out;
   transition: .5s ease-in-out;
+  border-bottom: 2px solid rgba(214, 48, 11, 1);
 }
 
 a:hover {
@@ -63,11 +71,13 @@ a:hover {
   -ms-transition: .5s ease-in-out;
   -o-transition: .5s ease-in-out;
   transition: .5s ease-in-out;
-  border-bottom: 2px solid #d6300b;
+  border-bottom: 2px solid rgba(214, 48, 11, 0);
 }
 
-#location a:hover,
-footer .socialMedia a:hover {
+nav a,
+#artists a,
+#location a,
+footer .socialMedia a {
   border-bottom: none;
 }
 
@@ -154,6 +164,7 @@ nav ul li a {
 #sticky_navigation { 
   padding: 0;
   margin: 0;
+  height:66px;
   width:100%;
   background:rgba(255,255,255,.93);
   z-index: 8000;
@@ -260,6 +271,12 @@ when scrolling */
 
 .artist a:hover {
   border-bottom: none;
+  text-decoration: none;
+  -webkit-transition: .5s ease-in-out;
+  -moz-transition: .5s ease-in-out;
+  -ms-transition: .5s ease-in-out;
+  -o-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
 }
 
 .artist li{
@@ -456,24 +473,10 @@ article.qna h3 {
   -ms-filter: none;
   -o-filter: none;
   filter: none;
-   -webkit-transition: .5s ease-in-out;
-  -moz-transition: .5s ease-in-out;
-  -ms-transition: .5s ease-in-out;
-  -o-transition: .5s ease-in-out;
-  transition: .5s ease-in-out;
 }
 
 /*** FOOTER ***/
 footer {
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flex;
-  display: flex;
-  -webkit-flex-direction: column;
-  -moz-flex-direction: column;
-  -ms-flex-direction: column;
-  -o-flex-direction: column;
-  flex-direction: column;
   margin-bottom: 5% !important;
   text-align: center;
 }
@@ -489,12 +492,11 @@ footer h2 {
   -ms-justify-content: center;
   -o-justify-content: center;
   justify-content: center; 
+  padding: 10% 0;
 }
 
 .socialMedia a {
-	padding: 10% 2%;
-	#padding: 10% 2%; /* IE 6, 7*/
-	padding/**/: 10% 2%; /* everthing but IE 6*/
+	padding: 0 2%;
 }
 
 .socialMedia a:hover {
@@ -502,7 +504,6 @@ footer h2 {
 }
 
 .socialMedia img{
-  background: blue;
   -webkit-transition: .5s ease-in-out;
   -moz-transition: .5s ease-in-out;
   -ms-transition: .5s ease-in-out;
@@ -513,29 +514,14 @@ footer h2 {
  .socialMedia a:hover img {
   opacity: .5;
  } 
-/** Hacking Firefox padding**/
-@-moz-document url-prefix() {
-		
-	.socialMedia a {
-		
-	}
-	.socialMedia img{
-	padding: 80% 2%;
-  opacity: 1;	
-  -webkit-transition: .3s ease-in-out;
-  transition: .3s ease-in-out;
-	}
-	.copyRight p {
-	padding-top: 3%;	
-	}
+
+ .copyRight p {
+  padding: 0;
 }
 
-.copyRight {
-	text-align: center;
+ .copyRight {
+  text-align: center;
 }
-
-
-
 
 /**************************************************
                 Tablet View
@@ -558,6 +544,7 @@ footer {
 /** link transition effect**/
 a {
   text-decoration: underline;
+  border-bottom: none;
 }
 
 /*************************
@@ -574,6 +561,10 @@ header {
 *************************/
 nav {
   margin-top: 4%;
+}
+
+nav ul li {
+  font-size: .9em;
 }
 
 /*************************
@@ -604,8 +595,9 @@ h2 {
     Artists
 *************************/
 .artist {
-    margin: 0.5%;
-    width: 48%;
+  margin: 0.5%;
+  width: 48%;
+	padding-bottom: 5%;
 }
 
 .rightpic {
@@ -621,6 +613,13 @@ h2 {
 .gpic{
 	width:45%;
 }
+
+.artistbio h2{
+	padding-top: 0;
+  
+ }
+
+
 
 /*************************
     FAQ
@@ -645,10 +644,6 @@ h2 {
   width: 100%;
 }
 
-.address img {
-  background: url('../images/mapclose-tab.png');
-}
-
 /*************************
     Footer
 *************************/
@@ -663,23 +658,6 @@ footer {
 
 .socialMedia img {
 	width: 10%;
-
-}
-
-/** Hacking Firefox padding**/
-@-moz-document url-prefix() {
-		
-	.socialMedia a {
-		
-	}
-	.socialMedia img{
-	padding: 80% 1%;	
-	}
-	.copyRight p {
-	padding-top: 3%;	
-	}
-}
-
 }
 
 /**************************************************
@@ -708,46 +686,21 @@ footer {
 header {
 	width: 100%;
 	text-align: center;
-	margin: 0 1.5% 1.5% 0;
-}
-
-.header-logo {
-	display: none;
 }
 
 header img {
   width: 50%;
 }
 
+.header-logo {
+	display: none;
+}
+
 /*************************
 		Navigation
 *************************/
-/*nav {
-	margin-top: 4%;
-}
+/* by sinyi*/
 
-nav ul li {
-  	width: 85%;
-  	display: block;
-}
-*/
-
-#nav-toggle span, #nav-toggle span:before, #nav-toggle span:after {
-  cursor: pointer;
-  border-radius: 1px;
-  height: 5px;
-  width: 35px;
-  background: white;
-  position: absolute;
-  display: block;
-  content: '';
-}
-#nav-toggle span:before {
-  top: -10px;
-}
-#nav-toggle span:after {
-  bottom: -10px; 
-}
 
 /*************************
 		"Home" Hours
@@ -771,6 +724,7 @@ nav ul li {
   -ms-column-rule: none; /* IE */
   -o-column-rule: none; /* Opera */
   column-rule: none;
+
 }
 
 .contacts p {
@@ -780,7 +734,8 @@ nav ul li {
 
 .right,
 .left {
-	padding-left: 15% !important;
+	padding-left: 20% !important;
+  margin: 0 auto;
 }
 
 
@@ -790,10 +745,24 @@ nav ul li {
 *************************/
 .artist {
   	width: 100%;
+	padding-bottom: 13%;
 }
 
 .gpic{
-	width:80%;
+	width:100%;
+}
+.artistbio h2{
+   text-align: center;
+}
+
+.profilepic{
+	width: 100%;
+
+}
+.artistbio{
+	width: 100%;
+	padding-left: 0;
+	text-align: center;
 }
 /*************************
   Paragraphs and Headings
@@ -864,29 +833,16 @@ article.qna p {
   padding: 0 auto;
 }
 
-.address a {
-  background: gray;
-  opacity: .8;
-}
-
-.address img {
-  -webkit-filter: none;
-  -moz-filter: none;
-  -ms-filter: none;
-  -o-filter: none;
-  filter: none;
-}
-
 /*************************
 		Footer
 *************************/
 
 .socialMedia {
-  padding: 0;
+  padding: 10% 0;
 }
 
 .socialMedia a {
-	padding: 10% .5% 5% .5%;
+	padding: 0 .5%;
 }
 
 .socialMedia img {
@@ -898,9 +854,11 @@ article.qna p {
 }*/
 }
 
+@media screen and (max-width: 767px) and (orientation: landscape) { 
 
+.right,
+.left {
+  padding-left: 30% !important;
+}
 
-
-
-
-
+}
