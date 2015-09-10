@@ -25,7 +25,7 @@ body {
   src: url('../fonts/Titania-Regular.ttf');
 }
 
-/******* Laptop *******/
+/******* Desktop *******/
 
 .container {
   width: 100%;
@@ -509,7 +509,7 @@ footer h2 {
 }
 
 .socialMedia a {
-	padding: 0 2%;
+	padding: 0 3%;
 }
 
 .socialMedia a:hover {
@@ -543,7 +543,7 @@ footer h2 {
                 Tablet View
 **************************************************/
 
-@media screen and (max-width: 1366px) {
+@media screen and (max-width: 1100px) {
 
 .contacts,
 .address,
@@ -909,7 +909,7 @@ article.qna p {
 }
 
 .socialMedia a {
-	padding: 0 .5%;
+	padding: 0 1%;
 }
 
 .socialMedia img {
@@ -923,9 +923,15 @@ article.qna p {
 
 @media screen and (max-width: 767px) and (orientation: landscape) { 
 
+/** Home **/
 .right,
 .left {
   padding-left: 30% !important;
+}
+
+/** Location **/
+.address span {
+  padding-left: 35%;
 }
 
 }
