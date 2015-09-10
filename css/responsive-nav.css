@@ -2,7 +2,7 @@
 @media screen and (max-width: 767px) {
 	
 @font-face {
-  font-family: 'Roboto';
+  font-family: 'Roboto', Sans-serif;
   src:url("../images/icons/responsivenav.eot");
   src:url(".../images/icons/responsivenav.eot?#iefix") format("embedded-opentype"),
     url("../images/icons/responsivenav.ttf") format("truetype"),
@@ -22,6 +22,7 @@
 .nav-collapse li {
   width: 100%;
   display: block;
+  text-decoration: none;
 }
 
 .js .nav-collapse {
@@ -31,6 +32,11 @@
   display: block;
   overflow: hidden;
   zoom: 1;
+  margin: 0;
+  padding: 0;
+  border-top: 2px dotted #454545;
+  border-bottom: 2px dotted #454545;
+  z-index: 4;
 }
 
 .nav-collapse.opened {
@@ -55,7 +61,7 @@
  
   }
   
-  .nav-toggle:before {
+ .nav-toggle:before {
   color: #d6300b; /* Edit this to change the icon color */
   font-family: 'Roboto', sans-serif;
   font-style: normal;
@@ -77,6 +83,33 @@
   font-size: 24px;
   content:"x";
 }
+
+/* top hamburger */
+/*header::before{
+  position: absolute;
+  top:0px;
+  left:-210px;
+ /* color: #d6300b; /* Edit this to change the icon color */
+  /*font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  font-size: 28px;
+  text-transform: none;
+  content: "≡";
+  text-indent: 0;
+  line-height: 55px;
+  speak: none;
+  width: 100%;
+}*/
+
+/*move down header image*/
+/*	width: 25%;
+	margin-top: 10%;
+	margin-right: 0;
+	margin-left: 0;
+	margin-bottom: 1.75%;
+} */
 }
 
 @media screen and (min-width: 48em) {

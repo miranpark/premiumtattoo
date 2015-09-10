@@ -41,7 +41,7 @@ body {
 h1,
 h2 {
   color: #525252;
-  font-family: 'Titania', Sans-serif;
+  font-family: 'Titania', Serif;
 }
 
 h2 {
@@ -74,6 +74,8 @@ a:hover {
 
 nav a,
 #artists a,
+.socialmedia a,
+.artistbio a,
 #location a,
 footer .socialMedia a {
   border-bottom: none;
@@ -87,7 +89,8 @@ a:link {
 }
 
 img {
-  width: 100%
+  width: 100%;
+  height: 100%;
 }
 
 /* section wrapper */
@@ -127,8 +130,8 @@ h1 {
 }
 
 header img {
-  width: 25%;
-  margin: 1.75% 0;
+  width: 30%;
+  margin: .5% 0 .75% 0;
 }
 
 /*** NAVIGATION ***/
@@ -207,6 +210,11 @@ when scrolling */
   margin: 0;
 }
 
+.contacts p,
+.contacts a {
+	font-family: 'Roboto Slab', serif;
+}
+
 .right {
   padding-left: 4%;
 }
@@ -242,25 +250,29 @@ when scrolling */
 /*** ARTISTS ***/
 
 #artist{
-	margin-left: 1%;
-	padding-bottom: 5%;
-	
+	margin-left: 6%;
+	padding-bottom: 5%;	
 }
 
 .artist {
   display: inline-block;
-  margin-right: 3.5%;
-  width: 22%;
+  margin-right: 3%;
+  width: 21%;
   align-items: center;
 }
+
 .artist:last-child{
 	margin-right: 0;
+	padding-right: 0;
 }
+.artistmobile {
+	display: none;
+	}
 
 .artistmobile, 
 .artist a {
-  text-decoration: underline;
-}
+  text-decoration: none;
+  }
 
 .artistmobile, 
 .artist a:link{
@@ -281,6 +293,7 @@ when scrolling */
 
 .artist li{
 	padding-top: 5%;
+	text-decoration: underline;
 }
 
 .artist img{
@@ -291,7 +304,7 @@ when scrolling */
   filter: grayscale(100%);
   filter: url(grayscale.svg); /* Firefox 4+ */
   filter: gray; /* IE 6-9 */ 
-   -webkit-transition: .5s ease-in-out;
+  -webkit-transition: .5s ease-in-out;
   -moz-transition: .5s ease-in-out;
   -ms-transition: .5s ease-in-out;
   -o-transition: .5s ease-in-out;
@@ -439,18 +452,20 @@ article.qna h3 {
 }
 
 .address p,
-.address a {
-  flex: 1;
+.address a,
+.address img {
   -webkit-flex: 1;
   -moz-flex: 1;
   -ms-flex: 1;
   -o-flex: 1;
+  flex: 1;
 }
 
 .address p {
   background: #fff;
   margin: 0;
   line-height: 1.8em;
+  font-family: 'Roboto Slab', serif;
 }
 
 .address span {
@@ -460,28 +475,11 @@ article.qna h3 {
   padding-left: 10%;
 }
 
-.address img {
-  -webkit-filter: grayscale(100%);
-  -moz-filter: grayscale(100%);
-  -ms-filter: grayscale(100%);
-  -o-filter: grayscale(100%);
-  filter: grayscale(100%);
-  filter: url(grayscale.svg); /* Firefox 4+ */
-  filter: gray; /* IE 6-9 */;
+.address,
+.address a:hover
+.socialMedia
+.socialMedia a:hover {
   -webkit-transition: .5s ease-in-out;
-  -moz-transition: .5s ease-in-out;
-  -ms-transition: .5s ease-in-out;
-  -o-transition: .5s ease-in-out;
-  transition: .5s ease-in-out;
-}
-
-.address img:hover {
-  -webkit-filter: none;
-  -moz-filter: none;
-  -ms-filter: none;
-  -o-filter: none;
-  filter: none;
-   -webkit-transition: .5s ease-in-out;
   -moz-transition: .5s ease-in-out;
   -ms-transition: .5s ease-in-out;
   -o-transition: .5s ease-in-out;
@@ -499,7 +497,6 @@ footer h2 {
 }
 
 .socialMedia {
-  display: inline-flex;
   -webkit-justify-content: center;
   -moz-justify-content: center;
   -ms-justify-content: center;
@@ -509,24 +506,9 @@ footer h2 {
 }
 
 .socialMedia a {
-	padding: 0 3%;
+	padding: 0 1%;
+  display: inline-block;
 }
-
-.socialMedia a:hover {
-  opacity: 1;
-}
-
-.socialMedia img{
-  -webkit-transition: .5s ease-in-out;
-  -moz-transition: .5s ease-in-out;
-  -ms-transition: .5s ease-in-out;
-  -o-transition: .5s ease-in-out;
-  transition: .5s ease-in-out;
-  }
-
- .socialMedia a:hover img {
-  opacity: .5;
- } 
 
 .copyRight p {
   padding: 0;
@@ -536,14 +518,10 @@ footer h2 {
 	text-align: center;
 }
 
-
-
-
 /**************************************************
-                Tablet View
+                laptop View
 **************************************************/
-
-@media screen and (max-width: 1100px) {
+@media screen and (max-width: 1330px) {
 
 .contacts,
 .address,
@@ -557,11 +535,6 @@ footer {
   width: 70%;
   margin: 0 auto;
 }
-/** link transition effect**/
-a {
-  text-decoration: underline;
-  border-bottom: none;
-}
 
 /*************************
     Header
@@ -569,7 +542,10 @@ a {
 header {
   width: 100%;
   text-align: center;
-  /*margin: 0 1.5% 1.5% 0;*/
+}
+
+header img {
+  width: 45%;
 }
 
 /*************************
@@ -610,14 +586,14 @@ h2 {
 /*************************
     Artists
 *************************/
-.artist {
+/*.artist {
     margin: 0.5%;
     width: 48%;
-	padding-bottom: 5%;
+  padding-bottom: 5%;
 }
 .artistmobile {
-	display: none;
-	}
+  display: none;
+  }
 .rightpic {
   float: right;
   clear: right;
@@ -629,13 +605,13 @@ h2 {
 }
 
 .gpic{
-	width:45%;
+  width:45%;
 }
 
 .artistbio h2{
-	padding-top: 0;
+  padding-top: 0;
   
- }
+ }*/
 
 
 
@@ -674,10 +650,78 @@ footer {
   padding: 5% 0;
 }
 
-.socialMedia img {
-	width: 10%;
-
 }
+
+/**************************************************
+                Tablet View
+**************************************************/
+
+@media screen and (max-width: 1024px) {
+
+
+/*************************
+  Paragraphs and Headings
+*************************/
+
+p {
+  font-size: .9em;
+  line-height: 1.3em;
+}
+
+h1,
+h2 {
+  font-size: 1.2em;
+}
+
+/** link transition effect**/
+a {
+  text-decoration: underline;
+}
+
+a,
+a:hover {
+  border-bottom: none;
+}
+
+nav ul li a {
+  text-decoration: none;
+}
+
+
+/*************************
+    Artists
+*************************/
+#artist {
+  margin-left: 0;
+}
+
+.artist {
+    margin: 0.5%;
+    width: 48%;
+	padding-bottom: 5%;
+}
+.artistmobile {
+	display: none;
+	}
+.rightpic {
+  float: right;
+  clear: right;
+}
+
+.leftpic {
+  float: left;
+  clear: left;
+}
+
+.gpic{
+	width:45%;
+}
+
+.artistbio h2{
+	padding-top: 0;
+  
+ }
+
 
 /**************************************************
                 Mobile View
@@ -708,7 +752,7 @@ header {
 }
 
 header img {
-  width: 50%;
+  width: 70%;
 }
 
 .header-logo {
@@ -718,15 +762,6 @@ header img {
 /*************************
 		Navigation
 *************************/
-/*nav {
-	margin-top: 4%;
-}
-
-nav ul li {
-  	width: 85%;
-  	display: block;
-}
-*/
 
 #nav-toggle span, #nav-toggle span:before, #nav-toggle span:after {
   cursor: pointer;
@@ -744,6 +779,11 @@ nav ul li {
 }
 #nav-toggle span:after {
   bottom: -10px; 
+}
+
+nav{
+  border-top: 0px dotted #454545;
+  border-bottom: 0px dotted #454545;
 }
 
 /*************************
@@ -777,11 +817,9 @@ nav ul li {
 
 .right,
 .left {
-	padding-left: 20% !important;
+  padding-left: 20% !important;
   margin: 0 auto;
 }
-
-
 
 /*************************
 		Artists
@@ -812,10 +850,7 @@ nav ul li {
 .gpic{
 	width:100%;
 }
-.artistbio h2{
-   text-align: center;
-   display: none;
-}
+
 
 .profilepic{
 	width: 100%;
@@ -824,12 +859,9 @@ nav ul li {
 .artistbio{
 	width: 100%;
 	padding-left: 0;
-	text-align: center;
+	text-align: left;
 }
 
-img.profilepic{
-	display:none;
-}
 
 /*************************
   Paragraphs and Headings
@@ -908,30 +940,17 @@ article.qna p {
   padding: 10% 0;
 }
 
-.socialMedia a {
-	padding: 0 1%;
-}
-
 .socialMedia img {
-	width: 10%;
+	width: 50px;
 }
 
-/*.copyRight {
-	it is unclear in the other stylesheet what properties are being affected.
-}*/
 }
 
 @media screen and (max-width: 767px) and (orientation: landscape) { 
 
-/** Home **/
 .right,
 .left {
   padding-left: 30% !important;
-}
-
-/** Location **/
-.address span {
-  padding-left: 35%;
 }
 
 }
