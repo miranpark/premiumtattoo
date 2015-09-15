@@ -1,4 +1,17 @@
 /*! fancyBox v2.1.5 fancyapps.com | fancyapps.com/fancybox/#license */
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+	overflow-x: hidden;
+}
+
+body {
+	width: 100%;
+	height: 100%;
+}
+
 .fancybox-wrap,
 .fancybox-skin,
 .fancybox-outer,
@@ -19,6 +32,7 @@
 
 .fancybox-wrap {
 	position: absolute;
+	padding: 0;
 	top: 0;
 	left: 0;
 	z-index: 8020;
@@ -46,6 +60,14 @@
 
 .fancybox-outer, .fancybox-inner {
 	position: relative;
+	
+}
+
+/* no underline on X and images */
+a.fancybox-item.fancybox-close,
+a.fancybox.fancybox-thumb
+ {
+	border-bottom: none;
 }
 
 .fancybox-inner {
@@ -68,7 +90,10 @@
 	display: block;
 	width: 100%;
 	height: 100%;
+	overflow: auto;
+	overflow-y: scroll;
 }
+
 
 .fancybox-image {
 	max-width: 100%;
@@ -76,7 +101,7 @@
 }
 
 #fancybox-loading, .fancybox-close, .fancybox-prev span, .fancybox-next span {
-	background-image: url('fancybox_sprite.png');
+	background-image: url(fancybox_sprite.png);
 }
 
 #fancybox-loading {
@@ -255,6 +280,17 @@
 	padding: 10px;
 	background: #000;
 	background: rgba(0, 0, 0, .8);
+}
+
+@media screen and (max-width: 767px) {
+	
+.fancybox{
+	overflow: auto;
+	overflow-y: scroll;
+	max-height: 100%;
+	max-width: 80%;
+		
+	
 }
 
 /*Retina graphics!*/

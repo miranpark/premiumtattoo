@@ -3,12 +3,13 @@
 
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="This is an example of a meta description. This will often show up in search results.">
   <title>PREMIUM TATTOO</title>
   <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" type="text/css" href="css/responsive-nav.css">
   <!--google fonts-->
-  <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Roboto|Roboto+Slab' rel='stylesheet' type='text/css'>
   <!--FAQ accordion icon-->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
   <!--jQuery -->
@@ -27,25 +28,63 @@
   <!--sticky nav-->
   <!--<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>-->
   <script src="js/nav.js"></script>
-
-
+  <script src="js/responsive-nav.js"></script>
+  <script>
+$(document).ready(function(){
+	$(".matt").hide();
+    $("#matt").click(function(){
+        $(".matt").toggle();		
+    });
+	$(".brett").hide();
+	$("#brett").click(function(){
+        $(".brett").toggle();
+    });
+	$(".dani").hide();
+	$("#dani").click(function(){
+        $(".dani").toggle();
+    });
+	$(".edwards").hide();
+	$("#edwards").click(function(){
+        $(".edwards").toggle();
+    });
+   });
+//social icons n map swapimages
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+  </script>
 </head>
 
-<body>
   <div class="container">
 
     <!--**** BANNER ****-->
-    <header role="banner">
+<header role="banner">
       <h1>Premium Tattoo</h1>
       <img src="images/logoDTdarker.png" alt="shop logo"/>
     </header>
 
     <!--**** NAVIGATION ****-->
-    <nav role="navigation" id="sticky_navigation">
+    <nav role="navigation" id="sticky_navigation" >
       <div id="sticky_navlogo">
-		    <img class="header-logo" src="images/logoMdarker68.png" alt="shop logo"/>
+		   <a href="index.html"> <img class="header-logo" src="images/logoMdarker68.png" alt="shop logo"/></a>
       </div> 
-      <ul>
+      <ul class="nav-collapse">
         <li><a href="index.html">Home</a></li>
         <li><a href="#mission">Mission</a></li>
         <li><a href="#artists">Artists</a></li>
@@ -87,26 +126,163 @@
     </section> <!--**** ABOUT ends ****-->
 
      <!--**** ARTISTS ****-->
-    <section id="artists" class="wrapper">
+  <section id="artists" class="wrapper">
       <h2 role="heading">Artists</h2>
       <div id="artist">
       <div class="artist">
-      <a href="deckerbio.html"  class="fancybox" data-fancybox-type="iframe" ><img src="images/artistPhotos/mattDT.jpg" alt="photo"><li>Matt Decker</li></a>
-      </div> <!--Decker section ends-->
+      <a href="deckerbio.html"  class="fancybox" data-fancybox-type="iframe" ><img src="images/artistPhotos/mattDT.jpg" alt="photo"><li>Matt Decker</li></a></div>
+      <!--Mobile section (hidden for desktop and tablet)-->
+     <div class="artistmobile" id="matt">
+      <a href="#"><img src="images/artistPhotos/mattDT.jpg" alt="photo"><li>Matt Decker</li></a></div>
+      <div class="artistpopout matt" >
 
-      <div class="artist">
-        <a href="brettbio.html" class="fancybox" data-fancybox-type="iframe" ><img src="images/artistPhotos/brettDT.jpg" alt="photo"><li>Brett Baumgart</li></a>
-        </div><!--Baumgart section ends-->
+        <div class="artistbio">
+           <p>Matt Decker began his tattooing career in the fall of 1993. He apprenticed in
 
-      <div class="artist">
-        <a href="silvabio.html" class="fancybox" data-fancybox-type="iframe"><img src="images/artistPhotos/danielleDT.jpg" alt="photo"><li>Danielle Silva</li></a></div>
-      <!--Silva section ends-->
+            Albuquerque, New Mexico at Rune Stone Tattoo under Ricky Fairweather. Matt 
 
-      <div class="artist">
-        <a href="edwardsbio.html" class="fancybox" data-fancybox-type="iframe"><img src="images/artistPhotos/lawrenceDT.jpg" alt="photo"><li>Lawrence Edwards</li></a></div>
-        </div>
-        <!--Gentz section ends-->
-    </section> <!--**** ARTISTS ends ****-->
+            moved to Oakland in 1994 and since been tattooing and creating art in the Bay Area. 
+
+            He opened Premium Tattoo with his wife in April of 2008.</p>
+            <div class="socialmedia"> 
+              <a href="https://instagram.com/deckro/" target="new"><img src="images/icons/instagram80.gif" class="icon"/></a>
+              <a href="mailto:premiumarmy@gmail.com" target="new"><img src="images/icons/mail80.gif" class="icon"/></a>
+            </div></div>
+            <div class="gallery">
+
+             <img src="images/Matt Decker/Decker01M.jpg" class="gpic" alt="" />
+
+             <img src="images/Matt Decker/decker02M.jpg" class="gpic" alt="" />
+
+             <img src="images/Matt Decker/decker03M.jpg" class="gpic" alt="" />
+
+             <img src="images/Matt Decker/decker04M.jpg" class="gpic" alt="" />
+
+             <img src="images/Matt Decker/decker05M.jpg" class="gpic" alt="" />   
+
+             <img src="images/Matt Decker/decker06M2.jpg" class="gpic" alt="" /> 
+
+             <img src="images/Matt Decker/decker07M.jpg" class="gpic" alt="" />    
+
+             <img src="images/Matt Decker/decker08M.jpg" class="gpic" alt="" />
+
+             <img src="images/Matt Decker/decker09M.jpg" class="gpic" alt="" />
+
+             <img src="images/Matt Decker/decker10M.jpg" class="gpic" alt="" /> 
+           </div>
+         </div>
+         <!--Mobile section ends-->
+         <!--Decker section ends-->
+
+         <div class="artist">
+          <a href="brettbio.html" class="fancybox" data-fancybox-type="iframe" ><img src="images/artistPhotos/brettDT.jpg" alt="photo"><li>Brett Baumgart</li></a></div>
+          <!--Mobile section (hidden for desktop and tablet)-->
+          <div class="artistmobile" id="brett">
+            <a href="#"><img src="images/artistPhotos/brettDT.jpg" alt="photo"><li>Brett Baumgart</li></a></div>
+            <div class="artistpopout brett">
+                <div class="artistbio">
+                <p>Brett Baumgart began his tattooing career in 2007. After tattooing locally and
+
+                  abroad, Brett joined Premium Tattoo in January of 2012.</p>
+                  <div class="socialmedia"> <a href="https://instagram.com/brettbaumgart/" target="new"><img src="images/icons/instagram80.gif" class="icon"/></a>
+                    <a href="mailto:premiumarmy@gmail.com" target="new"><img src="images/icons/mail80.gif" class="icon"/></a>
+                  </div></div>
+                  <div class="gallery">
+
+                   <img src="images/Brett Baumgart/baumgart01M2.jpg" class="gpic" alt="" />
+
+                   <img src="images/Brett Baumgart/baumgart02M2.jpg" class="gpic" alt="" />
+
+                   <img src="images/Brett Baumgart/baugmart03M2.jpg" class="gpic" alt="" />
+
+                   <img src="images/Brett Baumgart/baugmart04M2.jpg" class="gpic" alt="" />
+
+
+                   <img src="images/Brett Baumgart/baumgart05M.jpg" class="gpic" alt="" />
+
+                   <img src="images/Brett Baumgart/baumgart06M.jpg" class="gpic" alt="" />
+
+
+                   <img src="images/Brett Baumgart/baumgart07M.jpg" class="gpic" alt="" />
+                   
+                   <img src="images/Brett Baumgart/baumgart08M.jpg" class="gpic" alt="" />
+                   
+                   <img src="images/Brett Baumgart/baumgart09M.jpg" class="gpic" alt="" />
+
+                 </div>
+               </div>
+               <!--Mobile section ends-->
+               <!--Baumgart section ends-->
+
+               <div class="artist">
+                <a href="silvabio.html" class="fancybox" data-fancybox-type="iframe"><img src="images/artistPhotos/danielleDT.jpg" alt="photo"><li>Danielle Silva</li></a></div>
+                <!--Mobile section (hidden for desktop and tablet)-->
+                <div class="artistmobile" id="dani">
+                  <a href="#"><img src="images/artistPhotos/danielleDT.jpg" alt="photo"><li>Danielle Silva</li></a></div>
+                  <div class="artistpopout dani" >
+                  
+
+                    <div class="artistbio">
+                      <p>Danielle Silva began her tattooing career in 2009. After tattooing around the state,
+
+                        Danielle joined Premium Tattoo in January of 2012.</p>
+                        <div class="socialmedia"> 
+                          <a href="https://instagram.com/doomsdaydani/" target="new"><img src="images/icons/instagram80.gif" class="icon"/></a>
+                          <a href="https://facebook.com/dstattoo" target="new"><img src="images/icons/facebook80.gif" class="icon"/></a>
+                          <a href="mailto:premiumarmy@gmail.com" target="new"><img src="images/icons/mail80.gif" class="icon"/></a>
+                        </div></div>
+                        <div class="gallery">
+
+                         <img src="images/Danielle Silva/silva01M.jpg" class="gpic" alt="" />
+                         <img src="images/Danielle Silva/silva02M.jpg" class="gpic" alt="" />
+                         <img src="images/Danielle Silva/silva03M.jpg" class="gpic" alt="" />
+                         <img src="images/Danielle Silva/silva04M.jpg" class="gpic" alt="" />
+                         <img src="images/Danielle Silva/silva05M.jpg" class="gpic" alt="" />
+                         <img src="images/Danielle Silva/silva06M2.jpg" class="gpic" alt="" />
+                         <img src="images/Danielle Silva/silva07M2.jpg" class="gpic" alt="" />
+                         <img src="images/Danielle Silva/silva08M2.jpg" class="gpic" alt="" />
+                         <img src="images/Danielle Silva/silva09M.jpg" class="gpic" alt="" />
+                         <img src="images/Danielle Silva/silva10M.jpg" class="gpic" alt="" />
+
+                       </div>
+                     </div>  
+                     <!--Mobile section ends-->
+                     <!--Silva section ends--> 
+
+                     <div class="artist">
+                      <a href="edwardsbio.html" class="fancybox" data-fancybox-type="iframe"><img src="images/artistPhotos/lawrenceDT.jpg" alt="photo"><li>Lawrence Edwards</li></a></div>
+                      <!--Mobile section (hidden for desktop and tablet)-->
+                      <div class="artistmobile" id="edwards">
+                        <a href="#" class="mobile"><img src="images/artistPhotos/lawrenceDT.jpg" alt="photo"><li>Lawrence Edwards</li></a></div>
+                        <div class="artistpopout edwards">
+                         
+                          <div class="artistbio">
+
+                            <p>Lawrence Edwards began his tattooing career in 2012. After tattooing in Oregon and
+
+                              California, Lawrence joined Premium Tattoo in September of 2015.</p>
+                              <div class="socialmedia"> <a href="https://instagram.com/ledwardstattoo/" target="new"><img src="images/icons/instagram80.gif" class="icon"/></a>
+                                <a href="mailto:premiumarmy@gmail.com" target="new"><img src="images/icons/mail80.gif" class="icon"/></a>
+                              </div></div>
+                              <div class="gallery">
+                               <img src="images/Lawrence Edward/Lawrence01M.jpg" class="gpic" alt="" />
+                               <img src="images/Lawrence Edward/Lawrence02M.jpg" class="gpic" alt="" />
+                               <img src="images/Lawrence Edward/lawrence03M.jpg" class="gpic" alt="" />
+                               <img src="images/Lawrence Edward/lawrence04M.jpg" class="gpic" alt="" />
+                               <img src="images/Lawrence Edward/lawrence05M.jpg" class="gpic" alt="" />
+                               <img src="images/Lawrence Edward/lawrence06M.jpg" class="gpic" alt="" />
+                               <img src="images/Lawrence Edward/lawrence07M.jpg" class="gpic" alt="" />
+                               <img src="images/Lawrence Edward/lawrence08M.jpg" class="gpic" alt="" />
+                               <img src="images/Lawrence Edward/lawrence09M.jpg" class="gpic" alt="" />
+                               <img src="images/Lawrence Edward/lawrence10M.jpg" class="gpic" alt="" />
+                               <img src="images/Lawrence Edward/lawrence11M.jpg" class="gpic" alt="" />
+                               <img src="images/Lawrence Edward/lawrence12M.jpg" class="gpic" alt="" /> 
+                             </div>
+                           </div>
+                         </div>
+                         <!--Mobile section ends-->
+                         <!--Edwards section ends-->
+                       </section> <!--**** ARTISTS ends ****-->
 
      <!--**** FAQ ****-->
      <section id="faq" class="wrapper">
@@ -116,7 +292,7 @@
          <p>Premium Tattoo is located at <a target="_blank" href="https://www.google.com/maps/place/4130+Broadway,+Oakland,+CA+94611/@37.828986,-122.2554836,17z/data=!3m1!4b1!4m2!3m1!1s0x80857dfa5d5ab877:0xb41a17e66ba411e4">4130 Broadway, Oakland, CA 94611</a>. You can contact us at 510 • 922 • 8901</p>
          <h3><i class="fa fa-sort-desc"></i>When did Premium Tattoo first open?</h3>
          <p>Established 2008, as Premium Tattoo and Vintage by Matthew and Hilary Decker.</p>
-         <p>Our artists are <a href="deckerbio.html">Matthew Decker</a>, <a href="brettbio.html">Brett Baumgart</a>, <a href="silvabio.html">Danielle Silva</a>, and <a href="edwardsbio.html">Lawrence Edwards</a>.</p>
+         <p>Our artists are <a href="deckerbio.html"  class="fancybox" data-fancybox-type="iframe">Matthew Decker</a>, <a href="brettbio.html" class="fancybox" data-fancybox-type="iframe">Brett Baumgart</a>, <a href="silvabio.html" class="fancybox" data-fancybox-type="iframe">Danielle Silva</a>, and <a href="edwardsbio.html" class="fancybox" data-fancybox-type="iframe">Lawrence Edwards</a>.</p>
          <h3><i class="fa fa-sort-desc"></i>What are the store hours?</h3>
          <p>We are open Tuesday through Saturday 11:00 AM to 7:00 PM. We are closed Mondays, Sundays, and on most major holidays.</p>
          <h3><i class="fa fa-sort-desc"></i>What is the rate of pay?</h3>
@@ -124,15 +300,13 @@
          <h3><i class="fa fa-sort-desc"></i>Is there a deposit?</h3>
          <p>All appointments require an $80 non-refundable deposit that will be included in payment of the days tattoo work. All rescheduling needs to happen 24 hours prior to appointment, time to prevent forfeit of deposit. All rescheduling must be done via the shop phone 510 • 922 • 8901.</p>
          <h3><i class="fa fa-sort-desc"></i>How do I schedule a consultation?</h3>
-         <p>Call 510 • 922 • 8901 or email <a href="mailto:premiumarmy@gmail.com">PremiumArmy@gmail.com</a>to schedule a free consultation with one of our artists. Most consultations are held at 11:30 Tuesday to Saturday and take 15-20 minutes.</p>
+         <p>Call 510 • 922 • 8901 or email <a href="mailto:premiumarmy@gmail.com">PremiumArmy@gmail.com</a> to schedule a free consultation with one of our artists. Most consultations are held at 11:30 Tuesday to Saturday and take 15-20 minutes.</p>
          <h3><i class="fa fa-sort-desc"></i>Can I see the artwork before my appointment?</h3>
          <p>The artists of Premium tattoo do not release original artwork prior to the scheduled appointment time. Any redesign needs will be accommodated the day of the scheduled appointment, even if this causes us to reschedule another appointment time for the application of the finalized design.</p>
          <h3><i class="fa fa-sort-desc"></i>What should I do the day of my appointment?</h3>
          <p>On the day of your appointment you will need to be showered, fed, and wearing clean clothing that will be easy to work around. Be advised that the tattoo process may stain clothing. It is important the clothing, bedding and towels that will be used during the healing process also be laundered so as to prevent risk of bacterial infection. For this reason we also advise staying out of the garden, avoiding contact with animals and absolutely no water activities.</p>
          <h3><i class="fa fa-sort-desc"></i>How do I care for my tattoo?</h3>
          <p>The sun can damage your tattoo during the healing process.  For this reason, please wear clean loose fitting cotton clothing to protect your tattoo and allow it to breathe.</p>
-         <!-- make care sheet and link to it-->
-         <h3><i class="fa fa-sort-desc"></i>How do I care for my tattoo after my appointment?</h3>
          <p>Here is a copy of our <a href="Premium Tattoo After.pdf" target="new">care sheet</a>.</p>
          <h3>Rules</h3>
          <ul class="rule">
@@ -155,18 +329,18 @@
              4130 Broadway Street<br>
              Oakland, CA 94611<br>
              510 • 922 • 8901</span></p>
-          <a target="_blank" href="https://www.google.com/maps/place/Premium+Tattoo+and+Vintage/@37.829009,-122.2555311,17z/data=!3m1!4b1!4m2!3m1!1s0x80857dfa5c567e0f:0x25ff5c3f0a341c03"><img class="map" src="images/premiumtattooLoc.jpg" alt="google map"></a>
+          <a href="https://www.google.com/maps/place/Premium+Tattoo+and+Vintage/@37.829009,-122.2555311,17z/data=!3m1!4b1!4m2!3m1!1s0x80857dfa5c567e0f:0x25ff5c3f0a341c03" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('google map','','images/mapcolor-mob.jpg',0)"><img src="images/mapbw-mob.jpg" alt="Link to Google map" id="google map"></a>
           </div>
         </section> <!--**** LOCATION ends ****-->
 
         <!--**** FOOTER ****-->
         <footer id="footer" role="contentinfo">
           <h2 role="heading">Connect with us</h2>
-          <div class="socialMedia" > 
-            <a href="https://instagram.com/premiumtattoooakland" target="new"><img class="instagram" src="images/icons/instagram80.gif" alt="instagram link"></a>
-            <a href="https://www.facebook.com/PremiumTattoo" target="new"><img class="facebook" src="images/icons/facebook80.gif" alt="facebook link"></a>
-            <a href="https://www.pinterest.com/hilarydecker/tattoo-love/" target="new"><img class="pinterest" src="images/icons/pinterest80.gif" alt="pinterest link"></a>
-            <a href="mailto:premiumarmy@gmail.com" target="new"><img class="mail" src="images/icons/mail80.gif" alt="email link"></a>
+          <div class="socialMedia" >
+          <a href="https://instagram.com/premiumtattoooakland" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('instagram','','images/icons/instagram80color.gif',1)"><img src="images/icons/instagram80.gif" alt="Link to Instagram" id="instagram"></a>
+          <a href="https://www.facebook.com/PremiumTattoo" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('facebook','','images/icons/facebook80color.gif',0)"><img src="images/icons/facebook80.gif" alt="Link to Facebook" id="facebook"></a>
+          <a href="https://www.pinterest.com/hilarydecker/tattoo-love/" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('pinerest','','images/icons/pinterest80color.gif',0)"><img src="images/icons/pinterest80.gif" alt="Link to Pinterest" id="pinerest"></a>
+          <a href="mailto:premiumarmy@gmail.com" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('email','','images/icons/mail80color.jpg',0)"><img src="images/icons/mail80.gif" alt="Link to Email" id="email"></a>
           </div>
           <div class="copyRight">
             <p>&copy; <a href="index.html">Premium Tattoo Oakland</a></p>
@@ -178,10 +352,27 @@
 <script type="text/javascript">
 jQuery(document).ready(function($) {
     $(".fancybox").fancybox({
-        fitToView: false,
-        maxWidth: "95%" // or whatever you need
+        fitToView: true,
+      	maxHeight: "100%"
+		 // or whatever you need
     });
 }); // ready$(".fancybox").fancybox();
+</script>
+<script>
+var navigation = responsiveNav(".nav-collapse", {
+	animate: true,// Boolean: Use CSS3 transitions, true or false
+	transition: 284, // Integer: Speed of the transition,milliseconds
+	insert: "after",//String: Insert toggle before/after navigation
+	customToggle: "",// Selector: Specify the ID of a custom toggle
+	closeOnNavClick: false, // Boolean: Close the navigation on click
+	openPos: "relative", //String:Position opennav, relative/static
+	navClass: "nav-collapse",// String: Default CSS class.
+	navActiveClass: "js-nav-active",// String: Class added to <html>
+	jsClass: "js",// String:'JS enabled' class added to <html>
+	init: function(){},// Function: Init callback
+	open: function(){},// Function: Open callback
+	close: function(){}// Function: Close callback
+});
 </script>
 </body>
 </html>
